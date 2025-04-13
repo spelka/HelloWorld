@@ -1,7 +1,3 @@
-#declarative pipeline syntax
-#groovy
-
-
 pipeline {
     agent any
 
