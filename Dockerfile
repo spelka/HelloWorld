@@ -17,7 +17,13 @@ FROM python:3.9-slim
 WORKDIR /app
 
 # Copy the current directory contents into the container at /app
-COPY . /app
+#COPY . /app
+
+# Copy the hello.py file from your app folder into the container's /app directory
+COPY ./app/hello.py /app/
+
+# Copy requirements.txt from your local /app directory into the container's /app directory
+COPY ./app/requirements.txt /app/
 
 # Install any needed dependencies specified in requirements.txt
 RUN pip install --no-cache-dir -r requirements.txt
