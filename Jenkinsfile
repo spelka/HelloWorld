@@ -14,7 +14,7 @@ pipeline {
 
         stage('Build Docker Image') {
             steps {
-                sh 'powershell.exe docker build -t $DOCKERHUB_CREDENTIALS_USR/hello-world-app:latest .'
+                sh '/mnt/c/Windows/System32/WindowsPowerShell/v1.0/powershell.exe docker build -t $DOCKERHUB_CREDENTIALS_USR/hello-world-app:latest .'
             }
         }
 
